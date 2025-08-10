@@ -27,9 +27,9 @@ const generateBlogPost = (post, postContent) => {
   // Map internal categories to display-friendly names
   const displayCategory = (category) => {
     const categoryMap = {
-      'TOFU': 'Getting Started',
-      'MOFU': 'Strategy & Tips', 
-      'BOFU': 'Services',
+      'TOFU': 'Video Marketing',
+      'MOFU': 'Advanced Strategies', 
+      'BOFU': 'Professional Services',
       'Philadelphia, Pennsylvania': 'Philadelphia',
       'Austin, Texas': 'Austin',
       'Miami, Florida': 'Miami', 
@@ -87,9 +87,9 @@ const generateBlogIndex = () => {
     // Map internal categories to display-friendly names
     const displayCategory = (category) => {
       const categoryMap = {
-        'TOFU': 'Getting Started',
-        'MOFU': 'Strategy & Tips', 
-        'BOFU': 'Services',
+        'TOFU': 'Video Marketing',
+        'MOFU': 'Advanced Strategies', 
+        'BOFU': 'Professional Services',
         'Philadelphia, Pennsylvania': 'Philadelphia',
         'Austin, Texas': 'Austin',
         'Miami, Florida': 'Miami', 

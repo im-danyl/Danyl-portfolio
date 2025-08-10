@@ -132,7 +132,7 @@ export default function App() {
               <a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a>
               <a href="#work" className="hover:text-white transition-colors">Work</a>
               <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
-              <a href="/blog/" className="hover:text-white transition-colors">Blog</a>
+              <a href="/blog/" target="_blank" rel="noopener" className="hover:text-white transition-colors">Blog</a>
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.04 }}
@@ -374,7 +374,10 @@ export default function App() {
       {/* Pricing */}
       <section className="py-28 px-6 max-w-6xl mx-auto min-h-[100svh] flex flex-col justify-center" id="pricing">
         <h2 className="text-4xl md:text-5xl font-semibold mb-2 text-center">Simple pricing. No hidden stuff.</h2>
-        <p className="text-white/70 text-center mb-12">Clear scope. No hidden fees.</p>
+        <p className="text-white/70 text-center mb-4">Clear scope. No hidden fees.</p>
+        <div className="text-center mb-8 px-4 py-2 rounded-full bg-white/5 border border-white/20 max-w-fit mx-auto">
+          <p className="text-white/90 text-sm font-medium">Price increase coming soon - Lock in current rates now!</p>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {/* Pack 1 */}
@@ -413,9 +416,8 @@ export default function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.06 }}
             whileHover={{ y: -6, scale: 1.01 }}
-            className="group relative rounded-2xl p-6 border backdrop-blur bg-white/[0.06] border-white/20 hover:border-cyan-300/20 transition shadow-[0_20px_80px_rgba(0,0,0,0.35)] overflow-visible"
+            className="relative rounded-2xl p-6 border backdrop-blur bg-white/[0.04] border-white/10 hover:border-cyan-300/20 transition"
           >
-            <div className="absolute -top-3 right-4 text-[10px] px-2 py-1 rounded-full bg-white text-black">Popular</div>
             <h3 className="text-lg font-semibold">Social</h3>
             <div className="mt-3 text-4xl font-semibold">$120</div>
             <ul className="mt-4 text-white/85 text-sm space-y-2 list-disc ml-5">
@@ -429,7 +431,7 @@ export default function App() {
             </ul>
             <motion.a
               href="#contact"
-              whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(255,255,255,0.45)' }}
+              whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               className="mt-6 inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
             >
@@ -444,8 +446,9 @@ export default function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.12 }}
             whileHover={{ y: -6, scale: 1.01 }}
-            className="relative rounded-2xl p-6 border backdrop-blur bg-white/[0.04] border-white/10 hover:border-cyan-300/20 transition"
+            className="relative rounded-2xl p-6 border backdrop-blur bg-white/[0.06] border-white/20 hover:border-cyan-300/20 transition shadow-[0_20px_80px_rgba(0,0,0,0.35)] overflow-visible"
           >
+            <div className="absolute -top-3 right-4 text-[10px] px-2 py-1 rounded-full bg-white text-black">Popular</div>
             <h3 className="text-lg font-semibold">Complete</h3>
             <div className="mt-3 text-4xl font-semibold">$400</div>
             <ul className="mt-4 text-white/85 text-sm space-y-2 list-disc ml-5">
