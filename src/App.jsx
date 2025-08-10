@@ -132,6 +132,7 @@ export default function App() {
               <a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a>
               <a href="#work" className="hover:text-white transition-colors">Work</a>
               <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
+              <a href="/blog/" className="hover:text-white transition-colors">Blog</a>
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.04 }}
@@ -159,17 +160,11 @@ export default function App() {
             className="text-center mb-8 md:mb-10"
           >
             <h1 className="text-5xl md:text-7xl font-semibold mb-4 tracking-tight text-white">
-              I Make Content That’s Engaging
-              <span className="text-white">{'\u00A0'}&{'\u00A0'}</span>
-              <span
-                className="bg-gradient-to-b from-white to-neutral-300 bg-clip-text text-transparent"
-                style={{ textShadow: '0 0 10px rgba(34,211,238,0.25), 0 0 18px rgba(59,130,246,0.15)' }}
-              >
-                Uniquely Yours
-              </span>
+              Talking Head Video Editor for AI Agencies & Coaches
             </h1>
-            <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-              I’m Danyl, a video editor who helps brands and creators turn raw footage into something unforgettable.
+            <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto">
+              I help agencies and coaches grow their influence with expert video production —<br />
+              from talking head videos to YouTube content, social clips, and full content repurposing.
             </p>
             <div className="mt-6 flex items-center justify-center gap-4">
               <motion.a
@@ -381,8 +376,8 @@ export default function App() {
         <h2 className="text-4xl md:text-5xl font-semibold mb-2 text-center">Simple pricing. No hidden stuff.</h2>
         <p className="text-white/70 text-center mb-12">Clear scope. No hidden fees.</p>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Starter */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Pack 1 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -391,14 +386,15 @@ export default function App() {
             whileHover={{ y: -6, scale: 1.01 }}
             className="relative rounded-2xl p-6 border backdrop-blur bg-white/[0.04] border-white/10 hover:border-cyan-300/20 transition"
           >
-            <h3 className="text-lg font-semibold">Starter</h3>
+            <h3 className="text-lg font-semibold">Essential</h3>
             <div className="mt-3 text-4xl font-semibold">$200</div>
             <ul className="mt-4 text-white/85 text-sm space-y-2 list-disc ml-5">
-              <li>4 edited talking head videos (8–15 min each)</li>
-              <li>High‑quality animation</li>
-              <li>Color correction & audio balancing</li>
-              <li>Delivered in 5–7 days</li>
+              <li>2 long form videos</li>
+              <li>Professional editing & color correction</li>
+              <li>Audio balancing & enhancement</li>
+              <li>High‑quality animations</li>
               <li>Export‑ready MP4 (2K)</li>
+              <li>1st output in less than 48 hours</li>
             </ul>
             <motion.a
               href="#contact"
@@ -406,11 +402,11 @@ export default function App() {
               whileTap={{ scale: 0.98 }}
               className="mt-6 inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
             >
-              Get Starter Pack
+              Get Essential Pack
             </motion.a>
           </motion.div>
 
-          {/* Growth */}
+          {/* Pack 2 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -419,21 +415,17 @@ export default function App() {
             whileHover={{ y: -6, scale: 1.01 }}
             className="group relative rounded-2xl p-6 border backdrop-blur bg-white/[0.06] border-white/20 hover:border-cyan-300/20 transition shadow-[0_20px_80px_rgba(0,0,0,0.35)] overflow-visible"
           >
-            {/* subtle border only, no gradient glow */}
-
             <div className="absolute -top-3 right-4 text-[10px] px-2 py-1 rounded-full bg-white text-black">Popular</div>
-            <h3 className="text-lg font-semibold">Growth</h3>
-            <div className="mt-3 text-4xl font-semibold">$350</div>
+            <h3 className="text-lg font-semibold">Social</h3>
+            <div className="mt-3 text-4xl font-semibold">$120</div>
             <ul className="mt-4 text-white/85 text-sm space-y-2 list-disc ml-5">
-              <li>4 long videos (8–15 min)</li>
-              <li>8 shorts (15–30 sec)</li>
-              <li>Shorts optimized for YouTube Shorts, Reels & TikTok</li>
-              <li>High‑quality animation</li>
+              <li>4 short form videos</li>
+              <li>Optimized for social media platforms</li>
+              <li>YouTube Shorts, Reels & TikTok format</li>
+              <li>High‑quality editing & transitions</li>
               <li>Color correction & audio balancing</li>
-              <li>Optimized SEO‑friendly titles, descriptions & timestamps</li>
-              <li>Scheduling support available on request</li>
-              <li>Priority delivery in 3–5 days</li>
-              <li>Export‑ready MP4 (2K) — vertical (9:16) & landscape (16:9)</li>
+              <li>Vertical (9:16) format</li>
+              <li>1st output in less than 48 hours</li>
             </ul>
             <motion.a
               href="#contact"
@@ -441,7 +433,38 @@ export default function App() {
               whileTap={{ scale: 0.98 }}
               className="mt-6 inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
             >
-              Get Growth Pack
+              Get Social Pack
+            </motion.a>
+          </motion.div>
+
+          {/* Pack 3 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.12 }}
+            whileHover={{ y: -6, scale: 1.01 }}
+            className="relative rounded-2xl p-6 border backdrop-blur bg-white/[0.04] border-white/10 hover:border-cyan-300/20 transition"
+          >
+            <h3 className="text-lg font-semibold">Complete</h3>
+            <div className="mt-3 text-4xl font-semibold">$400</div>
+            <ul className="mt-4 text-white/85 text-sm space-y-2 list-disc ml-5">
+              <li>4 long form videos</li>
+              <li>8 short form videos</li>
+              <li>Complete content package</li>
+              <li>Professional editing & color correction</li>
+              <li>Audio balancing & enhancement</li>
+              <li>High‑quality animations</li>
+              <li>Multiple format exports</li>
+              <li>1st output in less than 48 hours</li>
+            </ul>
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
+            >
+              Get Complete Pack
             </motion.a>
           </motion.div>
         </div>

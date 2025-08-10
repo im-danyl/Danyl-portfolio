@@ -5,7 +5,17 @@
       "Bash(git add:*)",
       "Bash(git remote add:*)",
       "Bash(git push:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(mkdir:*)",
+      "Bash(node build-blog.js)",
+      "Bash(node:*)",
+      "Bash(mv:*)",
+      "Bash(npm install:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm run dev:*)",
+      "Bash(git restore:*)",
+      "Bash(rm:*)",
+      "Bash(npm uninstall:*)"
     ],
     "deny": []
   }

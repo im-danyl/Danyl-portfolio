@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Video Editing Insights | Danyl</title>
+    <meta name="description" content="Professional video editing insights for AI automation agencies and high-ticket coaches. Learn how to create authority-building content that converts.">
+    <meta name="keywords" content="video editing blog, ai agency video content, high-ticket coach marketing, talking head video tips, content creation strategy">
+    <link rel="canonical" href="https://danyl-portfolio.netlify.app/blog/">
+    <link rel="alternate" type="application/rss+xml" title="Danyl Blog RSS" href="/blog/feed.xml">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Video Editing Blog - Danyl">
+    <meta property="og:description" content="Professional video editing insights for AI automation agencies and high-ticket coaches. Learn how to create authority-building content that converts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://danyl-portfolio.netlify.app/blog">
+    <meta property="og:image" content="https://danyl-portfolio.netlify.app/danyl.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Video Editing Blog - Danyl">
+    <meta name="twitter:description" content="Professional video editing insights for AI automation agencies and high-ticket coaches. Learn how to create authority-building content that converts.">
+    <meta name="twitter:image" content="https://danyl-portfolio.netlify.app/danyl.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Danyl's Video Editing Blog",
+        "description": "Professional video editing insights for AI automation agencies and high-ticket coaches",
+        "url": "https://danyl-portfolio.netlify.app/blog",
+        "author": {
+            "@type": "Person",
+            "name": "Danyl"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Danyl"
+        }
+    }
+    </script>
+    
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #2a2a2a;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --accent-primary: #22d3ee;
+            --accent-secondary: #67e8f9;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --accent-primary: #0891b2;
+            --accent-secondary: #22d3ee;
+            --border-color: rgba(0, 0, 0, 0.1);
+            --card-bg: rgba(0, 0, 0, 0.02);
+        }
+
+        * { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+        
+        body { 
+            background: var(--bg-primary); 
+            color: var(--text-primary); 
+            font-family: 'Inter', sans-serif; 
+        }
+        
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+        
+        .theme-toggle:hover {
+            background: var(--card-bg);
+            color: var(--text-primary);
+        }
+        
+        .mobile-menu-button {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+        }
+        
+        .mobile-menu-button:hover {
+            background: var(--card-bg);
+            color: var(--text-primary);
+        }
+        
+        .mobile-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            padding: 16px;
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .mobile-menu.open { display: flex; }
+        
+        nav {
+            background: rgba(0, 0, 0, 0.9) !important;
+            border-bottom: 1px solid var(--border-color) !important;
+        }
+        
+        [data-theme="light"] nav {
+            background: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        .nav-text { color: var(--text-secondary) !important; }
+        .nav-text:hover { color: var(--text-primary) !important; }
+        
+        .gradient-btn {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+        }
+        .gradient-btn:hover {
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+            transform: translateY(-1px);
+        }
+        
+        .card-bg { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+        }
+        .card-bg:hover { 
+            border-color: var(--accent-secondary); 
+        }
+        
+        .aspect-video {
+            aspect-ratio: 16 / 9;
+        }
+        
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .text-muted { color: var(--text-muted); }
+        .text-secondary { color: var(--text-secondary); }
+        .text-accent { color: var(--accent-secondary); }
+        .text-accent:hover { color: var(--accent-primary); }
+        .text-accent-primary { color: var(--accent-primary); }
+        
+        .group:hover .text-accent-primary { color: var(--accent-primary); }
+        .group:hover .text-accent { color: var(--accent-primary); }
+        
+        h2, h3 { color: var(--text-primary); }
+        
+        .location-header { color: var(--accent-secondary); }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 py-4 relative">
+            <div class="flex items-center justify-between">
+                <a href="/" class="text-lg font-semibold nav-text">Danyl</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-6 text-sm">
+                    <a href="/" class="nav-text transition-colors">Home</a>
+                    <a href="/blog" class="nav-text transition-colors">Blog</a>
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg id="theme-icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                    <a href="/#contact" class="gradient-btn text-white px-4 py-2 rounded-full font-medium transition-colors">Book Strategy Call</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <svg id="theme-icon-sun-mobile" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg id="theme-icon-moon-mobile" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <a href="/" class="nav-text transition-colors py-2">Home</a>
+                <a href="/blog" class="nav-text transition-colors py-2">Blog</a>
+                <a href="/#contact" class="gradient-btn text-white px-4 py-3 rounded-full font-medium transition-colors text-center">Book Strategy Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-10">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Video Editing Insights</h1>
+            <p class="text-xl text-secondary max-w-3xl mx-auto">
+                Professional tips and strategies for AI automation agencies and high-ticket coaches to create authority-building content that converts.
+            </p>
+        </div>
+    </section>
+
+    <!-- TOFU/MOFU/BOFU Sections -->
+    <section class="pb-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-semibold mb-4">Awareness (TOFU)</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+    <article class="group cursor-pointer">
+      <a href="/blog/talking-head-video-tips-ai-automation-agencies/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=200&fit=crop" alt="5 Talking Head Video Editing Tips for AI Automation Agency Founders" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">5 Talking Head Video Editing Tips for AI Automation Agency Founders</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Master talking head videos for your AI automation agency. 5 professional editing tips that turn boring footage into client-attracting content. Real examples included.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jun 26, 2025</span>
+            <span class="text-muted">7 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/video-repurposing-high-ticket-coaches/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=200&fit=crop" alt="How High-Ticket Coaches Turn One Video into 10 Marketing Assets" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How High-Ticket Coaches Turn One Video into 10 Marketing Assets</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Learn how successful coaches multiply their content reach. Step-by-step guide to repurposing one talking head video into 10 powerful marketing assets.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jun 25, 2025</span>
+            <span class="text-muted">8 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/ai-agencies-talking-head-video-investment/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=200&fit=crop" alt="Why AI Agencies Should Invest in High-Quality Talking Head Videos" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Why AI Agencies Should Invest in High-Quality Talking Head Videos</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Discover why top AI automation agencies invest in professional video content. ROI data, client case studies, and conversion metrics included.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jun 24, 2025</span>
+            <span class="text-muted">6 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/why-talking-head-videos-are-essential-for-ai-automation-agencies-in-2025/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop" alt="Why Talking Head Videos Are Essential for AI Automation Agencies in 2025" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Why Talking Head Videos Are Essential for AI Automation Agencies in 2025</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Why Talking Head Videos Are Essential for AI Automation Agencies in 2025. Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 10, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-high-ticket-coaches-can-use-video-content-to-build-authority-and-trust/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop" alt="How High-Ticket Coaches Can Use Video Content to Build Authority and Trust" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How High-Ticket Coaches Can Use Video Content to Build Authority and Trust</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How High-Ticket Coaches Can Use Video Content to Build Authority and Trust. Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 9, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/5-common-video-mistakes-coaches-make-and-how-to-avoid-them/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=200&fit=crop" alt="5 Common Video Mistakes Coaches Make and How to Avoid Them" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">5 Common Video Mistakes Coaches Make and How to Avoid Them</h2>
+          <p class="text-secondary mb-4 line-clamp-3">5 Common Video Mistakes Coaches Make and How to Avoid Them. Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 8, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/the-ultimate-guide-to-repurposing-one-talking-head-video-into-multiple-social-media-clips/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop" alt="The Ultimate Guide to Repurposing One Talking Head Video Into Multiple Social Media Clips" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">The Ultimate Guide to Repurposing One Talking Head Video Into Multiple Social Media Clips</h2>
+          <p class="text-secondary mb-4 line-clamp-3">The Ultimate Guide to Repurposing One Talking Head Video Into Multiple Social Media Clips. Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 7, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/top-video-content-trends-for-coaches-and-ai-agencies-you-need-to-know/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=200&fit=crop" alt="Top Video Content Trends for Coaches and AI Agencies You Need to Know" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Top Video Content Trends for Coaches and AI Agencies You Need to Know</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Top Video Content Trends for Coaches and AI Agencies You Need to Know. Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 6, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-professional-video-editing-boosts-engagement-on-youtube-and-linkedin/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=200&fit=crop" alt="How Professional Video Editing Boosts Engagement on YouTube and LinkedIn" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How Professional Video Editing Boosts Engagement on YouTube and LinkedIn</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How Professional Video Editing Boosts Engagement on YouTube and LinkedIn. Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 5, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/why-your-talking-head-videos-arent-converting-and-how-editing-fixes-that/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=200&fit=crop" alt="Why Your Talking Head Videos Aren’t Converting (And How Editing Fixes That)" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Why Your Talking Head Videos Aren’t Converting (And How Editing Fixes That)</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Why Your Talking Head Videos Aren’t Converting (And How Editing Fixes That). Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 4, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-ai-agencies-can-leverage-short-form-videos-to-generate-leads/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop" alt="How AI Agencies Can Leverage Short-Form Videos to Generate Leads" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How AI Agencies Can Leverage Short-Form Videos to Generate Leads</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How AI Agencies Can Leverage Short-Form Videos to Generate Leads. Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 3, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/the-psychology-behind-effective-talking-head-videos-for-high-ticket-sales/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=200&fit=crop" alt="The Psychology Behind Effective Talking Head Videos for High-Ticket Sales" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">The Psychology Behind Effective Talking Head Videos for High-Ticket Sales</h2>
+          <p class="text-secondary mb-4 line-clamp-3">The Psychology Behind Effective Talking Head Videos for High-Ticket Sales. Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 2, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/5-tips-to-make-your-talking-head-videos-more-engaging-and-persuasive/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=200&fit=crop" alt="5 Tips to Make Your Talking Head Videos More Engaging and Persuasive" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Getting Started</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">5 Tips to Make Your Talking Head Videos More Engaging and Persuasive</h2>
+          <p class="text-secondary mb-4 line-clamp-3">5 Tips to Make Your Talking Head Videos More Engaging and Persuasive. Actionable strategies, examples, and a clear call-to-action for tofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Aug 1, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-semibold mb-4">Consideration (MOFU)</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+    <article class="group cursor-pointer">
+      <a href="/blog/how-high-quality-animations-can-elevate-your-coaching-videos/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop" alt="How High-Quality Animations Can Elevate Your Coaching Videos" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Strategy & Tips</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How High-Quality Animations Can Elevate Your Coaching Videos</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How High-Quality Animations Can Elevate Your Coaching Videos. Actionable strategies, examples, and a clear call-to-action for mofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 31, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/what-to-expect-when-you-hire-a-talking-head-video-editor-step-by-step/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=200&fit=crop" alt="What to Expect When You Hire a Talking Head Video Editor: Step-by-Step" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Strategy & Tips</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">What to Expect When You Hire a Talking Head Video Editor: Step-by-Step</h2>
+          <p class="text-secondary mb-4 line-clamp-3">What to Expect When You Hire a Talking Head Video Editor: Step-by-Step. Actionable strategies, examples, and a clear call-to-action for mofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 30, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/long-form-vs-short-form-video-which-is-best-for-your-coaching-business/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?w=400&h=200&fit=crop" alt="Long Form vs Short Form Video: Which Is Best for Your Coaching Business?" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Strategy & Tips</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Long Form vs Short Form Video: Which Is Best for Your Coaching Business?</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Long Form vs Short Form Video: Which Is Best for Your Coaching Business?. Actionable strategies, examples, and a clear call-to-action for mofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 29, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/case-study-how-professional-video-editing-helped-a-coach-triple-their-client-inquiries/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=200&fit=crop" alt="Case Study: How Professional Video Editing Helped a Coach Triple Their Client Inquiries" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Strategy & Tips</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Case Study: How Professional Video Editing Helped a Coach Triple Their Client Inquiries</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Case Study: How Professional Video Editing Helped a Coach Triple Their Client Inquiries. Actionable strategies, examples, and a clear call-to-action for mofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 28, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-to-plan-your-talking-head-video-content-for-maximum-impact/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=200&fit=crop" alt="How to Plan Your Talking Head Video Content for Maximum Impact" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Strategy & Tips</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How to Plan Your Talking Head Video Content for Maximum Impact</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How to Plan Your Talking Head Video Content for Maximum Impact. Actionable strategies, examples, and a clear call-to-action for mofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 27, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/the-importance-of-color-correction-and-audio-balancing-in-professional-videos/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&h=200&fit=crop" alt="The Importance of Color Correction and Audio Balancing in Professional Videos" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Strategy & Tips</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">The Importance of Color Correction and Audio Balancing in Professional Videos</h2>
+          <p class="text-secondary mb-4 line-clamp-3">The Importance of Color Correction and Audio Balancing in Professional Videos. Actionable strategies, examples, and a clear call-to-action for mofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 26, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-to-choose-the-right-video-editing-package-for-your-business-needs/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop" alt="How to Choose the Right Video Editing Package for Your Business Needs" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Strategy & Tips</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How to Choose the Right Video Editing Package for Your Business Needs</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How to Choose the Right Video Editing Package for Your Business Needs. Actionable strategies, examples, and a clear call-to-action for mofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 25, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/5-reasons-ai-automation-agencies-should-invest-in-talking-head-video-editing/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=200&fit=crop" alt="5 Reasons AI Automation Agencies Should Invest in Talking Head Video Editing" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Strategy & Tips</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">5 Reasons AI Automation Agencies Should Invest in Talking Head Video Editing</h2>
+          <p class="text-secondary mb-4 line-clamp-3">5 Reasons AI Automation Agencies Should Invest in Talking Head Video Editing. Actionable strategies, examples, and a clear call-to-action for mofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 24, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-semibold mb-4">Decision (BOFU)</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+    <article class="group cursor-pointer">
+      <a href="/blog/why-our-complete-video-editing-package-is-the-best-choice-for-coaches-and-ai-agencies/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=200&fit=crop" alt="Why Our Complete Video Editing Package Is the Best Choice for Coaches and AI Agencies" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Services</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Why Our Complete Video Editing Package Is the Best Choice for Coaches and AI Agencies</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Why Our Complete Video Editing Package Is the Best Choice for Coaches and AI Agencies. Actionable strategies, examples, and a clear call-to-action for bofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 23, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-to-book-a-free-content-strategy-call-and-what-youll-get/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=200&fit=crop" alt="How to Book a Free Content Strategy Call and What You’ll Get" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Services</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How to Book a Free Content Strategy Call and What You’ll Get</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How to Book a Free Content Strategy Call and What You’ll Get. Actionable strategies, examples, and a clear call-to-action for bofu audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 22, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="pb-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-semibold mb-4">Local Markets</h2>
+            <div class="space-y-8">
+                
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold mb-4 location-header">Philadelphia, Pennsylvania</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+    <article class="group cursor-pointer">
+      <a href="/blog/how-real-estate-agencies-in-philadelphia-can-grow-their-business-using-youtube/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=200&fit=crop" alt="How Real Estate Agencies in Philadelphia Can Grow Their Business Using YouTube" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Philadelphia</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How Real Estate Agencies in Philadelphia Can Grow Their Business Using YouTube</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How Real Estate Agencies in Philadelphia Can Grow Their Business Using YouTube. Actionable strategies, examples, and a clear call-to-action for philadelphia, pennsylvania audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 21, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/top-5-youtube-marketing-strategies-for-philadelphia-business-coaches/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1609799794828-a7a78b7b6b42?w=400&h=200&fit=crop" alt="Top 5 YouTube Marketing Strategies for Philadelphia Business Coaches" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Philadelphia</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Top 5 YouTube Marketing Strategies for Philadelphia Business Coaches</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Top 5 YouTube Marketing Strategies for Philadelphia Business Coaches. Actionable strategies, examples, and a clear call-to-action for philadelphia, pennsylvania audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 20, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/why-philadelphia-startups-should-invest-in-video-content-to-scale-fast/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=400&h=200&fit=crop" alt="Why Philadelphia Startups Should Invest in Video Content to Scale Fast" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Philadelphia</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Why Philadelphia Startups Should Invest in Video Content to Scale Fast</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Why Philadelphia Startups Should Invest in Video Content to Scale Fast. Actionable strategies, examples, and a clear call-to-action for philadelphia, pennsylvania audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 19, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-to-use-youtube-shorts-to-attract-clients-for-philadelphia-luxury-realtors/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=400&h=200&fit=crop" alt="How to Use YouTube Shorts to Attract Clients for Philadelphia Luxury Realtors" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Philadelphia</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How to Use YouTube Shorts to Attract Clients for Philadelphia Luxury Realtors</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How to Use YouTube Shorts to Attract Clients for Philadelphia Luxury Realtors. Actionable strategies, examples, and a clear call-to-action for philadelphia, pennsylvania audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 18, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/building-a-personal-brand-on-youtube-a-guide-for-philadelphia-consultants/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=200&fit=crop" alt="Building a Personal Brand on YouTube: A Guide for Philadelphia Consultants" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Philadelphia</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Building a Personal Brand on YouTube: A Guide for Philadelphia Consultants</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Building a Personal Brand on YouTube: A Guide for Philadelphia Consultants. Actionable strategies, examples, and a clear call-to-action for philadelphia, pennsylvania audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 17, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+          </div>
+        </div>
+      
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold mb-4 location-header">Austin, Texas</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+    <article class="group cursor-pointer">
+      <a href="/blog/how-austin-tech-startups-can-explode-growth-with-youtube-marketing/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?w=400&h=200&fit=crop" alt="How Austin Tech Startups Can Explode Growth with YouTube Marketing" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Austin</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How Austin Tech Startups Can Explode Growth with YouTube Marketing</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How Austin Tech Startups Can Explode Growth with YouTube Marketing. Actionable strategies, examples, and a clear call-to-action for austin, texas audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 16, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/the-best-youtube-content-ideas-for-business-coaches-in-austin/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=200&fit=crop" alt="The Best YouTube Content Ideas for Business Coaches in Austin" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Austin</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">The Best YouTube Content Ideas for Business Coaches in Austin</h2>
+          <p class="text-secondary mb-4 line-clamp-3">The Best YouTube Content Ideas for Business Coaches in Austin. Actionable strategies, examples, and a clear call-to-action for austin, texas audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 15, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/why-austin-agencies-are-winning-more-clients-using-video-marketing/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=200&fit=crop" alt="Why Austin Agencies Are Winning More Clients Using Video Marketing" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Austin</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Why Austin Agencies Are Winning More Clients Using Video Marketing</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Why Austin Agencies Are Winning More Clients Using Video Marketing. Actionable strategies, examples, and a clear call-to-action for austin, texas audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 14, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-to-use-youtube-to-build-trust-and-authority-as-an-austin-consultant/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=200&fit=crop" alt="How to Use YouTube to Build Trust and Authority as an Austin Consultant" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Austin</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How to Use YouTube to Build Trust and Authority as an Austin Consultant</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How to Use YouTube to Build Trust and Authority as an Austin Consultant. Actionable strategies, examples, and a clear call-to-action for austin, texas audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 13, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/top-tips-for-austin-entrepreneurs-to-grow-their-youtube-channel-fast/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop" alt="Top Tips for Austin Entrepreneurs to Grow Their YouTube Channel Fast" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Austin</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Top Tips for Austin Entrepreneurs to Grow Their YouTube Channel Fast</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Top Tips for Austin Entrepreneurs to Grow Their YouTube Channel Fast. Actionable strategies, examples, and a clear call-to-action for austin, texas audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 12, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+          </div>
+        </div>
+      
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold mb-4 location-header">Miami, Florida</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+    <article class="group cursor-pointer">
+      <a href="/blog/growing-your-miami-real-estate-agency-with-youtube-proven-tips/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Growing Your Miami Real Estate Agency with YouTube: Proven Tips" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Miami</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Growing Your Miami Real Estate Agency with YouTube: Proven Tips</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Growing Your Miami Real Estate Agency with YouTube: Proven Tips. Actionable strategies, examples, and a clear call-to-action for miami, florida audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 11, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-miami-health-clinics-can-use-youtube-to-attract-high-paying-clients/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=200&fit=crop" alt="How Miami Health Clinics Can Use YouTube to Attract High-Paying Clients" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Miami</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How Miami Health Clinics Can Use YouTube to Attract High-Paying Clients</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How Miami Health Clinics Can Use YouTube to Attract High-Paying Clients. Actionable strategies, examples, and a clear call-to-action for miami, florida audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 10, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/best-video-marketing-strategies-for-miami-business-coaches/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop" alt="Best Video Marketing Strategies for Miami Business Coaches" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Miami</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Best Video Marketing Strategies for Miami Business Coaches</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Best Video Marketing Strategies for Miami Business Coaches. Actionable strategies, examples, and a clear call-to-action for miami, florida audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 9, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/using-youtube-shorts-to-boost-your-miami-luxury-brand-presence/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?w=400&h=200&fit=crop" alt="Using YouTube Shorts to Boost Your Miami Luxury Brand Presence" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Miami</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Using YouTube Shorts to Boost Your Miami Luxury Brand Presence</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Using YouTube Shorts to Boost Your Miami Luxury Brand Presence. Actionable strategies, examples, and a clear call-to-action for miami, florida audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 8, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-miami-consultants-can-leverage-youtube-to-grow-their-client-base/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=200&fit=crop" alt="How Miami Consultants Can Leverage YouTube to Grow Their Client Base" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Miami</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How Miami Consultants Can Leverage YouTube to Grow Their Client Base</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How Miami Consultants Can Leverage YouTube to Grow Their Client Base. Actionable strategies, examples, and a clear call-to-action for miami, florida audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 7, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+          </div>
+        </div>
+      
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold mb-4 location-header">Denver, Colorado</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+    <article class="group cursor-pointer">
+      <a href="/blog/how-denver-saas-companies-can-gain-more-customers-through-youtube/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1619856699906-09e1f58c98b1?w=400&h=200&fit=crop" alt="How Denver SaaS Companies Can Gain More Customers Through YouTube" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Denver</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How Denver SaaS Companies Can Gain More Customers Through YouTube</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How Denver SaaS Companies Can Gain More Customers Through YouTube. Actionable strategies, examples, and a clear call-to-action for denver, colorado audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 6, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/youtube-marketing-tips-for-denver-business-coaches-and-consultants/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=200&fit=crop" alt="YouTube Marketing Tips for Denver Business Coaches and Consultants" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Denver</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">YouTube Marketing Tips for Denver Business Coaches and Consultants</h2>
+          <p class="text-secondary mb-4 line-clamp-3">YouTube Marketing Tips for Denver Business Coaches and Consultants. Actionable strategies, examples, and a clear call-to-action for denver, colorado audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 5, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/growing-your-denver-consulting-firm-using-video-content-marketing/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Growing Your Denver Consulting Firm Using Video Content Marketing" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Denver</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Growing Your Denver Consulting Firm Using Video Content Marketing</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Growing Your Denver Consulting Firm Using Video Content Marketing. Actionable strategies, examples, and a clear call-to-action for denver, colorado audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 4, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/why-denver-entrepreneurs-should-invest-in-youtube-shorts-today/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=200&fit=crop" alt="Why Denver Entrepreneurs Should Invest in YouTube Shorts Today" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Denver</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Why Denver Entrepreneurs Should Invest in YouTube Shorts Today</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Why Denver Entrepreneurs Should Invest in YouTube Shorts Today. Actionable strategies, examples, and a clear call-to-action for denver, colorado audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 3, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-denver-startups-can-use-youtube-to-build-authority-and-attract-leads/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=400&h=200&fit=crop" alt="How Denver Startups Can Use YouTube to Build Authority and Attract Leads" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Denver</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How Denver Startups Can Use YouTube to Build Authority and Attract Leads</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How Denver Startups Can Use YouTube to Build Authority and Attract Leads. Actionable strategies, examples, and a clear call-to-action for denver, colorado audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 2, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+          </div>
+        </div>
+      
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold mb-4 location-header">Charlotte, North Carolina</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+    <article class="group cursor-pointer">
+      <a href="/blog/youtube-marketing-for-charlotte-financial-advisors-a-step-by-step-guide/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=200&fit=crop" alt="YouTube Marketing for Charlotte Financial Advisors: A Step-by-Step Guide" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Charlotte</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">YouTube Marketing for Charlotte Financial Advisors: A Step-by-Step Guide</h2>
+          <p class="text-secondary mb-4 line-clamp-3">YouTube Marketing for Charlotte Financial Advisors: A Step-by-Step Guide. Actionable strategies, examples, and a clear call-to-action for charlotte, north carolina audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jul 1, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-charlotte-real-estate-agents-can-close-more-deals-with-video/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=200&fit=crop" alt="How Charlotte Real Estate Agents Can Close More Deals with Video" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Charlotte</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How Charlotte Real Estate Agents Can Close More Deals with Video</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How Charlotte Real Estate Agents Can Close More Deals with Video. Actionable strategies, examples, and a clear call-to-action for charlotte, north carolina audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jun 30, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/why-charlotte-business-coaches-should-focus-on-youtube-for-lead-generation/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=200&fit=crop" alt="Why Charlotte Business Coaches Should Focus on YouTube for Lead Generation" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Charlotte</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Why Charlotte Business Coaches Should Focus on YouTube for Lead Generation</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Why Charlotte Business Coaches Should Focus on YouTube for Lead Generation. Actionable strategies, examples, and a clear call-to-action for charlotte, north carolina audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jun 29, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/using-youtube-shorts-to-build-your-charlotte-coaching-brand-quickly/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=200&fit=crop" alt="Using YouTube Shorts to Build Your Charlotte Coaching Brand Quickly" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Charlotte</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">Using YouTube Shorts to Build Your Charlotte Coaching Brand Quickly</h2>
+          <p class="text-secondary mb-4 line-clamp-3">Using YouTube Shorts to Build Your Charlotte Coaching Brand Quickly. Actionable strategies, examples, and a clear call-to-action for charlotte, north carolina audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jun 28, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+    <article class="group cursor-pointer">
+      <a href="/blog/how-charlotte-consultants-can-use-youtube-to-grow-their-high-ticket-services/" class="block rounded-xl card-bg hover:border-color-accent transition h-full overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=200&fit=crop" alt="How Charlotte Consultants Can Use YouTube to Grow Their High-Ticket Services" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="mb-3">
+            <span class="text-accent text-sm font-medium">Charlotte</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-3 group-hover:text-accent-primary transition">How Charlotte Consultants Can Use YouTube to Grow Their High-Ticket Services</h2>
+          <p class="text-secondary mb-4 line-clamp-3">How Charlotte Consultants Can Use YouTube to Grow Their High-Ticket Services. Actionable strategies, examples, and a clear call-to-action for charlotte, north carolina audiences.</p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-muted">Jun 27, 2025</span>
+            <span class="text-muted">7–10 min read</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+          </div>
+        </div>
+      
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="p-8 rounded-2xl card-bg">
+                <h2 class="text-3xl font-bold mb-4">Ready to Scale Your Content?</h2>
+                <p class="text-muted mb-6 max-w-2xl mx-auto">
+                    Get professional video editing that transforms your expertise into authority-building content that attracts premium clients.
+                </p>
+                <a href="/#contact" class="inline-flex items-center justify-center px-6 py-3 gradient-btn text-white font-medium rounded-full transition-colors">
+                    Book Your Strategy Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t py-8" style="border-color: var(--border-color);">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-muted">&copy; 2025 Danyl. Professional Video Editor for AI Agencies & High-Ticket Coaches.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const sunIcons = document.querySelectorAll('#theme-icon-sun, #theme-icon-sun-mobile');
+            const moonIcons = document.querySelectorAll('#theme-icon-moon, #theme-icon-moon-mobile');
+            
+            if (html.getAttribute('data-theme') === 'light') {
+                html.removeAttribute('data-theme');
+                sunIcons.forEach(icon => icon.classList.add('hidden'));
+                moonIcons.forEach(icon => icon.classList.remove('hidden'));
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.setAttribute('data-theme', 'light');
+                sunIcons.forEach(icon => icon.classList.remove('hidden'));
+                moonIcons.forEach(icon => icon.classList.add('hidden'));
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            mobileMenu.classList.toggle('open');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+
+        // Set initial theme from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const sunIcons = document.querySelectorAll('#theme-icon-sun, #theme-icon-sun-mobile');
+            const moonIcons = document.querySelectorAll('#theme-icon-moon, #theme-icon-moon-mobile');
+            
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                sunIcons.forEach(icon => icon.classList.remove('hidden'));
+                moonIcons.forEach(icon => icon.classList.add('hidden'));
+            } else {
+                sunIcons.forEach(icon => icon.classList.add('hidden'));
+                moonIcons.forEach(icon => icon.classList.remove('hidden'));
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.remove('open');
+                document.getElementById('menu-icon').classList.remove('hidden');
+                document.getElementById('close-icon').classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
