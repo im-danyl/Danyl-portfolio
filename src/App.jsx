@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import * as Dialog from '@radix-ui/react-dialog'
-import { Play, X, Briefcase, GraduationCap, ChevronDown } from 'lucide-react'
+import { Play, X, Briefcase, GraduationCap, ChevronDown, Menu } from 'lucide-react'
 
 const FEATURED_VIDEOS = [
   { id: 'ypiYSQdN1Lw', title: 'Sample Work 1' },
@@ -116,6 +116,8 @@ function HeroReel({ id }) {
 }
 
 export default function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
   return (
     <div className="bg-black text-white selection:bg-white/20">
       {/* Subtle global radial gradients (with ice-blue accents) */}
@@ -125,11 +127,13 @@ export default function App() {
 
       {/* Navbar */}
       <header className="fixed top-0 inset-x-0 z-50">
-        <nav className="mx-auto max-w-5xl px-4 sm:px-6 py-3 md:py-4" role="navigation" aria-label="Main navigation">
-          <div className="flex items-center justify-between rounded-full bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 shadow-[0_0_40px_rgba(34,211,238,0.06)]">
-            <a href="#" className="flex items-center">
+        <nav className="mx-auto max-w-5xl px-3 sm:px-6 py-2 md:py-4" role="navigation" aria-label="Main navigation">
+          <div className="flex items-center justify-between rounded-full bg-white/5 backdrop-blur-md border border-white/10 px-3 sm:px-4 py-2 shadow-[0_0_40px_rgba(34,211,238,0.06)]">
+            <a href="#" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
               <img src="/logo.png" alt="Danyl Ahmed - Professional Video Editor Logo" className="h-8 w-8 rounded-full border border-white/20" />
             </a>
+            
+            {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-6 text-sm text-white/80">
               <a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a>
               <a href="#work" className="hover:text-white transition-colors">Work</a>
@@ -144,8 +148,69 @@ export default function App() {
                 Get Started
               </motion.a>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <Menu size={20} className="text-white" />
+            </button>
           </div>
         </nav>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="md:hidden absolute top-full left-0 right-0 mx-3 mt-2 rounded-2xl bg-black/95 backdrop-blur-md border border-white/10 overflow-hidden"
+            >
+              <div className="px-4 py-2">
+                <a 
+                  href="#testimonials" 
+                  className="block py-3 text-white/80 hover:text-white transition-colors border-b border-white/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Testimonials
+                </a>
+                <a 
+                  href="#work" 
+                  className="block py-3 text-white/80 hover:text-white transition-colors border-b border-white/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Work
+                </a>
+                <a 
+                  href="#pricing" 
+                  className="block py-3 text-white/80 hover:text-white transition-colors border-b border-white/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Pricing
+                </a>
+                <a 
+                  href="/blog/" 
+                  target="_blank" 
+                  rel="noopener" 
+                  className="block py-3 text-white/80 hover:text-white transition-colors border-b border-white/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Blog
+                </a>
+                <a 
+                  href="#contact" 
+                  className="block mt-3 mb-2 text-center py-3 rounded-full bg-gradient-to-r from-white via-blue-300 to-purple-300 text-black font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Get Started
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
       {/* Hero */}
       <main>
@@ -155,26 +220,26 @@ export default function App() {
         <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(255,255,255,0.10),transparent)]" />
 
         {/* Copy top */}
-        <div className="relative z-10 w-full max-w-6xl px-6">
+        <div className="relative z-10 w-full max-w-6xl px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-center mb-8 md:mb-10"
           >
-            <h1 className="text-5xl md:text-7xl font-semibold mb-4 tracking-tight text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold mb-4 sm:mb-6 tracking-tight text-white leading-tight">
               Talking Head Video Editor for<br /><span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">AI Agencies & Coaches</span>
             </h1>
-            <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto">
-              I help agencies and coaches grow their influence with expert video production —<br />
-              from talking head videos to YouTube content, social clips, and full content repurposing.
+            <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-4xl mx-auto px-2 leading-relaxed">
+              I help agencies and coaches grow their influence with expert video production —<br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>from talking head videos to YouTube content, social clips, and full content repurposing.
             </p>
-            <div className="mt-6 flex items-center justify-center gap-4">
+            <div className="mt-8 sm:mt-6 flex items-center justify-center gap-4">
               <motion.a
                 href="#work"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center rounded-full border border-white/20 text-white/90 hover:bg-white/10 px-6 py-3"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 text-white/90 hover:bg-white/10 px-6 py-3 min-h-[48px] text-sm sm:text-base"
               >
                 See Selected Work
               </motion.a>
@@ -202,10 +267,10 @@ export default function App() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-28 px-6 max-w-6xl mx-auto min-h-[100svh] flex flex-col justify-center" id="testimonials" aria-labelledby="testimonials-heading">
-        <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-semibold mb-3 text-center">Client Feedback</h2>
-        <p className="text-center text-white/70 max-w-2xl mx-auto mb-12">Genuine words from people I’ve worked with.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 max-w-6xl mx-auto min-h-[100svh] flex flex-col justify-center" id="testimonials" aria-labelledby="testimonials-heading">
+        <h2 id="testimonials-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 sm:mb-4 text-center">Client Feedback</h2>
+        <p className="text-center text-white/70 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 text-sm sm:text-base">Genuine words from people I've worked with.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
           {TESTIMONIALS.map((t, i) => (
             <motion.div 
               key={i}
@@ -252,11 +317,11 @@ export default function App() {
       </section>
 
       {/* Featured Work */}
-      <section className="py-28 px-6 max-w-7xl mx-auto min-h-[100svh] flex flex-col justify-center" id="work" aria-labelledby="work-heading">
-        <h2 id="work-heading" className="text-4xl md:text-5xl font-semibold mb-4 text-center">Featured Projects</h2>
-        <p className="text-white/70 text-center mb-14">Some of my favorite recent edits.</p>
+      <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 max-w-7xl mx-auto min-h-[100svh] flex flex-col justify-center" id="work" aria-labelledby="work-heading">
+        <h2 id="work-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 sm:mb-4 text-center">Featured Projects</h2>
+        <p className="text-white/70 text-center mb-8 sm:mb-12 lg:mb-14 px-4 text-sm sm:text-base">Some of my favorite recent edits.</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {FEATURED_VIDEOS.map((video, i) => {
             const thumb = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`
             const watchUrl = `https://www.youtube.com/watch?v=${video.id}`
@@ -375,14 +440,14 @@ export default function App() {
       </section>
 
       {/* Pricing */}
-      <section className="py-28 px-6 max-w-6xl mx-auto min-h-[100svh] flex flex-col justify-center" id="pricing" aria-labelledby="pricing-heading">
-        <h2 id="pricing-heading" className="text-4xl md:text-5xl font-semibold mb-2 text-center">Simple pricing. No hidden stuff.</h2>
-        <p className="text-white/70 text-center mb-4">Clear scope. No hidden fees.</p>
+      <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 max-w-6xl mx-auto min-h-[100svh] flex flex-col justify-center" id="pricing" aria-labelledby="pricing-heading">
+        <h2 id="pricing-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-2 sm:mb-3 text-center">Simple pricing. No hidden stuff.</h2>
+        <p className="text-white/70 text-center mb-4 px-4 text-sm sm:text-base">Clear scope. No hidden fees.</p>
         <div className="text-center mb-8 px-4 py-2 rounded-full bg-white/5 border border-white/20 max-w-fit mx-auto">
-          <p className="text-white/90 text-sm font-medium">Price increase coming soon - Lock in current rates now!</p>
+          <p className="text-white/90 text-xs sm:text-sm font-medium">Price increase coming soon - Lock in current rates now!</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {/* Growth Plus - $320 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -610,9 +675,9 @@ export default function App() {
       
 
       {/* Contact */}
-      <section className="py-24 px-6 max-w-4xl mx-auto text-center min-h-[70svh] flex flex-col justify-center" id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" className="text-4xl md:text-5xl font-semibold mb-6">Let's make something</h2>
-        <p className="text-white/70 mb-8">Whether you have raw footage or just an idea, let’s talk.</p>
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 max-w-4xl mx-auto text-center min-h-[70svh] flex flex-col justify-center" id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6">Let's make something</h2>
+        <p className="text-white/70 mb-6 sm:mb-8 px-4 text-sm sm:text-base">Whether you have raw footage or just an idea, let's talk.</p>
         <div className="flex justify-center">
           <motion.a
             href="https://wa.me/94773377082"
@@ -622,17 +687,17 @@ export default function App() {
             whileTap={{ scale: 0.98 }}
             animate={{ scale: [1, 1.02, 1], boxShadow: ['0 0 0 rgba(0,0,0,0)', '0 0 15px rgba(255,255,255,0.4)', '0 0 0 rgba(0,0,0,0)'] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="px-6 py-3 bg-gradient-to-r from-white via-blue-300 to-purple-300 text-black rounded-full"
+            className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-white via-blue-300 to-purple-300 text-black rounded-full font-medium min-h-[48px] text-sm sm:text-base"
           >
             Book a Call
           </motion.a>
         </div>
-        <div className="mt-8 flex flex-col items-center justify-center gap-4">
-          <a href="mailto:thedanylahmed@gmail.com" className="text-white/90 hover:text-white transition-colors">thedanylahmed@gmail.com</a>
-          <div className="flex items-center justify-center gap-7 text-white/80">
-            <a href="https://x.com/danyl_ds" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">X</a>
-            <a href="https://www.linkedin.com/in/danyl-ahmed/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://www.instagram.com/ds_danyl/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Instagram</a>
+        <div className="mt-6 sm:mt-8 flex flex-col items-center justify-center gap-3 sm:gap-4">
+          <a href="mailto:thedanylahmed@gmail.com" className="text-white/90 hover:text-white transition-colors text-sm sm:text-base">thedanylahmed@gmail.com</a>
+          <div className="flex items-center justify-center gap-5 sm:gap-7 text-white/80">
+            <a href="https://x.com/danyl_ds" target="_blank" rel="noreferrer" className="hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center text-sm sm:text-base">X</a>
+            <a href="https://www.linkedin.com/in/danyl-ahmed/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center text-sm sm:text-base">LinkedIn</a>
+            <a href="https://www.instagram.com/ds_danyl/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center text-sm sm:text-base">Instagram</a>
           </div>
         </div>
       </section>
@@ -642,9 +707,11 @@ export default function App() {
         href="#contact"
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.98 }}
-        className="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center rounded-full bg-white text-black px-5 py-3 font-medium shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+        className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 inline-flex items-center justify-center rounded-full bg-white text-black px-4 sm:px-5 py-3 font-medium shadow-[0_10px_30px_rgba(0,0,0,0.35)] text-sm sm:text-base min-h-[48px] min-w-[48px]"
+        aria-label="Contact us to get started"
       >
-        Get Started
+        <span className="hidden sm:inline">Get Started</span>
+        <span className="sm:hidden">💬</span>
       </motion.a>
       </div>
   )
