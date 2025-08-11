@@ -29,36 +29,36 @@ const TESTIMONIALS = [
 
 const FAQS = [
   {
-    q: 'What’s included in the Starter Pack?',
-    a: 'The Starter Pack includes 4 longform videos, each between 8 and 15 minutes long. You\'ll get full editing, color correction, audio balancing, and 2 free revisions per video. Delivery typically takes 5–7 days.'
+    q: 'What services do you offer?',
+    a: 'I specialize in video editing for AI agencies and coaches - from talking head videos and YouTube content to social clips and complete content repurposing. Whether you need longform videos or shortform social content, I deliver professional edits that grow your influence.'
   },
   {
-    q: 'What does the Growth Pack include?',
-    a: 'The Growth Pack includes 4 longform videos (8–15 minutes each) plus 8 shortform clips per video, repurposed for social platforms. That’s a total of 4 long videos and 32 short clips, all edited with a consistent style.'
+    q: 'What\'s included in your packages?',
+    a: 'Growth Plus includes 8 short-form videos for $320. Authority Plus includes 4 long-form videos for $400. Profit Plus combines both - 4 long-form videos plus 8 short-form videos for $600. All packages include high-quality animations, script optimization, and fast delivery.'
   },
   {
-    q: 'What are shortform clips?',
-    a: 'Shortform clips are shorter edits between 15 to 60 seconds, created by cutting highlights from your longform videos. These are perfect for TikTok, Instagram Reels, YouTube Shorts, and more.'
+    q: 'How do revisions work?',
+    a: 'All packages include revisions to ensure your content meets your exact vision. I work closely with you throughout the process, so most clients need minimal adjustments after the first delivery.'
   },
   {
-    q: 'Can I get only shortform clips without the long videos?',
-    a: 'Yes, you can! Please contact me to discuss your needs and get a custom quote for shortform-only editing.'
+    q: 'What\'s your turnaround time?',
+    a: 'All packages feature fast delivery timelines. Long-form videos typically deliver within 5-7 days, while short-form content delivers in 3-5 days. Rush delivery available for urgent projects.'
   },
   {
-    q: 'How many revisions do I get?',
-    a: 'The Starter Pack includes 2 free revisions per longform video. The Growth Pack includes 3 free revisions per longform video. Note: Minor spelling mistakes or very small changes don’t count as a revision.'
+    q: 'How do I send you my footage?',
+    a: 'Upload via Google Drive, Dropbox, WeTransfer, or your preferred platform. I\'ll send detailed instructions and handle the technical setup once we start working together.'
   },
   {
-    q: 'How do I share my footage?',
-    a: 'You can upload your raw footage via Google Drive, Dropbox, WeTransfer, or any file-sharing platform you prefer. I’ll provide instructions once we start.'
+    q: 'Can I get custom packages?',
+    a: 'Absolutely. If you need different video lengths, volumes, or specific deliverables, just reach out. I create tailored solutions that fit your exact content strategy and budget.'
   },
   {
-    q: 'How long does delivery take?',
-    a: 'Starter Pack videos are delivered in 5–7 days. Growth Pack videos and all short clips typically take 3–5 days with priority turnaround.'
+    q: 'What makes your editing different?',
+    a: 'I focus exclusively on content creators in the AI and coaching space. This specialization means I understand your audience, platform requirements, and what drives engagement in your niche.'
   },
   {
-    q: 'Can I request a custom package?',
-    a: 'Yes! If your needs differ or you want a different video length or volume, just get in touch. I’ll create a custom plan tailored to your project.'
+    q: 'Do you work with agencies?',
+    a: 'Yes - I work with both individual coaches and agencies managing multiple creators. Volume discounts and streamlined workflows available for agency partners with ongoing content needs.'
   }
 ]
 
@@ -137,7 +137,7 @@ export default function App() {
                 href="#contact"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-white via-blue-300 to-purple-300 text-black px-4 py-2 font-medium"
               >
                 Get Started
               </motion.a>
@@ -160,7 +160,7 @@ export default function App() {
             className="text-center mb-8 md:mb-10"
           >
             <h1 className="text-5xl md:text-7xl font-semibold mb-4 tracking-tight text-white">
-              Talking Head Video Editor for AI Agencies & Coaches
+              Talking Head Video Editor for<br /><span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">AI Agencies & Coaches</span>
             </h1>
             <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto">
               I help agencies and coaches grow their influence with expert video production —<br />
@@ -366,7 +366,7 @@ export default function App() {
             whileTap={{ scale: 0.98 }}
             className="inline-flex items-center justify-center rounded-full bg-white text-black px-5 py-3 font-medium"
           >
-            Ready to get started? Let’s talk.
+            Ready to get started? Let's talk.
           </motion.a>
         </div>
       </section>
@@ -379,95 +379,96 @@ export default function App() {
           <p className="text-white/90 text-sm font-medium">Price increase coming soon - Lock in current rates now!</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {/* Pack 1 */}
+        <div className="grid md:grid-cols-3 gap-6 items-stretch">
+          {/* Growth Plus - $320 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             whileHover={{ y: -6, scale: 1.01 }}
-            className="relative rounded-2xl p-6 border backdrop-blur bg-white/[0.04] border-white/10 hover:border-cyan-300/20 transition"
+            className="relative rounded-2xl p-8 border backdrop-blur bg-white/[0.04] border-white/10 hover:border-cyan-300/20 transition flex flex-col min-h-[440px]"
           >
-            <h3 className="text-lg font-semibold">Essential</h3>
-            <div className="mt-3 text-4xl font-semibold">$200</div>
+            <h3 className="text-lg font-semibold">Growth Plus</h3>
+            <div className="mt-3 text-4xl font-semibold">$320</div>
+            <p className="text-xs text-white/40 mt-1">$40 per short-form video</p>
             <ul className="mt-4 text-white/85 text-sm space-y-2 list-disc ml-5">
-              <li>2 long form videos</li>
-              <li>Professional editing & color correction</li>
-              <li>Audio balancing & enhancement</li>
-              <li>High‑quality animations</li>
-              <li>Export‑ready MP4 (2K)</li>
-              <li>1st output in less than 48 hours</li>
+              <li>8 Short-form Videos</li>
+              <li>High-Quality Animations</li>
+              <li>Script Optimization</li>
+              <li>Captions + Posting</li>
+              <li>Fast Delivery</li>
+              <li>Detailed Analytics Report</li>
             </ul>
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
+              className="mt-auto inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
             >
-              Get Essential Pack
+              Get Growth Plus
             </motion.a>
           </motion.div>
 
-          {/* Pack 2 */}
+          {/* Authority Plus - $400 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.06 }}
             whileHover={{ y: -6, scale: 1.01 }}
-            className="relative rounded-2xl p-6 border backdrop-blur bg-white/[0.04] border-white/10 hover:border-cyan-300/20 transition"
+            className="relative rounded-2xl p-8 border backdrop-blur bg-white/[0.04] border-white/10 hover:border-cyan-300/20 transition flex flex-col min-h-[440px]"
           >
-            <h3 className="text-lg font-semibold">Social</h3>
-            <div className="mt-3 text-4xl font-semibold">$120</div>
+            <h3 className="text-lg font-semibold">Authority Plus</h3>
+            <div className="mt-3 text-4xl font-semibold">$400</div>
+            <p className="text-xs text-white/40 mt-1">$100 per long-form video</p>
             <ul className="mt-4 text-white/85 text-sm space-y-2 list-disc ml-5">
-              <li>4 short form videos</li>
-              <li>Optimized for social media platforms</li>
-              <li>YouTube Shorts, Reels & TikTok format</li>
-              <li>High‑quality editing & transitions</li>
-              <li>Color correction & audio balancing</li>
-              <li>Vertical (9:16) format</li>
-              <li>1st output in less than 48 hours</li>
+              <li>4 Long-form Videos</li>
+              <li>High-Quality Animations</li>
+              <li>Script Optimization</li>
+              <li>SEO + Posting</li>
+              <li>Fast Delivery</li>
+              <li>Detailed Analytics Report</li>
             </ul>
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
+              className="mt-auto inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
             >
-              Get Social Pack
+              Get Authority Plus
             </motion.a>
           </motion.div>
 
-          {/* Pack 3 */}
+          {/* Profit Plus - $600 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.12 }}
             whileHover={{ y: -6, scale: 1.01 }}
-            className="relative rounded-2xl p-6 border backdrop-blur bg-white/[0.06] border-white/20 hover:border-cyan-300/20 transition shadow-[0_20px_80px_rgba(0,0,0,0.35)] overflow-visible"
+            className="relative rounded-2xl p-8 border backdrop-blur bg-white/[0.06] border-white/20 hover:border-cyan-300/20 transition shadow-[0_20px_80px_rgba(0,0,0,0.35)] overflow-visible flex flex-col min-h-[440px]"
           >
             <div className="absolute -top-3 right-4 text-[10px] px-2 py-1 rounded-full bg-white text-black">Popular</div>
-            <h3 className="text-lg font-semibold">Complete</h3>
-            <div className="mt-3 text-4xl font-semibold">$400</div>
+            <h3 className="text-lg font-semibold">Profit Plus</h3>
+            <div className="mt-3 text-4xl font-semibold">$600</div>
+            <p className="text-xs text-white/40 mt-1">$80 per long-form • $35 per short-form</p>
             <ul className="mt-4 text-white/85 text-sm space-y-2 list-disc ml-5">
-              <li>4 long form videos</li>
-              <li>8 short form videos</li>
-              <li>Complete content package</li>
-              <li>Professional editing & color correction</li>
-              <li>Audio balancing & enhancement</li>
-              <li>High‑quality animations</li>
-              <li>Multiple format exports</li>
-              <li>1st output in less than 48 hours</li>
+              <li>4 Long-form Videos</li>
+              <li>8 Short-form Videos</li>
+              <li>High-Quality Animations</li>
+              <li>Script Optimization</li>
+              <li>Captions + Posting</li>
+              <li>Fast Delivery</li>
+              <li>Detailed Analytics Report</li>
             </ul>
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-white text-black px-4 py-2 font-medium"
+              className="mt-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-white via-blue-300 to-purple-300 text-black px-4 py-2 font-medium"
             >
-              Get Complete Pack
+              Get Profit Plus
             </motion.a>
           </motion.div>
         </div>
@@ -618,9 +619,9 @@ export default function App() {
             whileTap={{ scale: 0.98 }}
             animate={{ scale: [1, 1.02, 1], boxShadow: ['0 0 0 rgba(0,0,0,0)', '0 0 15px rgba(255,255,255,0.4)', '0 0 0 rgba(0,0,0,0)'] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="px-6 py-3 bg-white text-black rounded-full"
+            className="px-6 py-3 bg-gradient-to-r from-white via-blue-300 to-purple-300 text-black rounded-full"
           >
-            WhatsApp Me
+            Book a Call
           </motion.a>
         </div>
         <div className="mt-8 flex items-center justify-center gap-7 text-white/80">
