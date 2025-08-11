@@ -197,7 +197,7 @@
 <body>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-6 py-4 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 relative">
             <div class="flex items-center justify-between">
                 <a href="/" class="flex items-center">
                     <img src="/logo.png" alt="Danyl" class="h-6 w-6 rounded-full border border-white/20" />
@@ -219,8 +219,8 @@
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="theme-toggle" onclick="toggleTheme()">
+                <div class="md:hidden flex items-center gap-3">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors" onclick="toggleTheme()">
                         <svg id="theme-icon-sun-mobile" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                         </svg>
@@ -228,7 +228,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                         </svg>
                     </button>
-                    <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                    <button class="mobile-menu-button p-2 rounded-full hover:bg-white/10 transition-colors" onclick="toggleMobileMenu()">
                         <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -241,56 +241,56 @@
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="mobile-menu">
-                <a href="/" class="nav-text transition-colors py-2">Home</a>
-                <a href="/blog" class="nav-text transition-colors py-2">Blog</a>
-                <a href="/#contact" class="gradient-btn text-white px-4 py-3 rounded-full font-medium transition-colors text-center">Book Strategy Call</a>
+                <a href="/" class="nav-text transition-colors py-3 px-2 block hover:bg-white/10 rounded-lg">Home</a>
+                <a href="/blog" class="nav-text transition-colors py-3 px-2 block hover:bg-white/10 rounded-lg">Blog</a>
+                <a href="/#contact" class="gradient-btn text-white px-4 py-3 rounded-full font-medium transition-colors text-center block mt-4">Book Strategy Call</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-10">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Video Editing Insights</h1>
-            <p class="text-xl text-secondary max-w-3xl mx-auto">
+    <section class="pt-20 sm:pt-24 pb-8 sm:pb-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Video Editing Insights</h1>
+            <p class="text-base sm:text-lg md:text-xl text-secondary max-w-3xl mx-auto px-2">
                 Professional tips and strategies for AI automation agencies and high-ticket coaches to create authority-building content that converts.
             </p>
         </div>
     </section>
 
     <!-- TOFU/MOFU/BOFU Sections -->
-    <section class="pb-10">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-2xl font-semibold mb-4">Awareness (TOFU)</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="pb-8 sm:pb-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Awareness (TOFU)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {{blogPostsTOFU}}
             </div>
         </div>
     </section>
 
-    <section class="pb-10">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-2xl font-semibold mb-4">Consideration (MOFU)</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="pb-8 sm:pb-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Consideration (MOFU)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {{blogPostsMOFU}}
             </div>
         </div>
     </section>
 
-    <section class="pb-10">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-2xl font-semibold mb-4">Decision (BOFU)</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="pb-8 sm:pb-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Decision (BOFU)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {{blogPostsBOFU}}
             </div>
         </div>
     </section>
 
     <!-- Locations -->
-    <section class="pb-16">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-2xl font-semibold mb-4">Local Markets</h2>
-            <div class="space-y-8">
+    <section class="pb-12 sm:pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Local Markets</h2>
+            <div class="space-y-6 sm:space-y-8">
                 {{blogPostsLocations}}
             </div>
         </div>
