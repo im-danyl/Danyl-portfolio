@@ -125,10 +125,10 @@ export default function App() {
 
       {/* Navbar */}
       <header className="fixed top-0 inset-x-0 z-50">
-        <nav className="mx-auto max-w-5xl px-4 sm:px-6 py-3 md:py-4">
+        <nav className="mx-auto max-w-5xl px-4 sm:px-6 py-3 md:py-4" role="navigation" aria-label="Main navigation">
           <div className="flex items-center justify-between rounded-full bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 shadow-[0_0_40px_rgba(34,211,238,0.06)]">
             <a href="#" className="flex items-center">
-              <img src="/logo.png" alt="Danyl" className="h-8 w-8 rounded-full border border-white/20" />
+              <img src="/logo.png" alt="Danyl Ahmed - Professional Video Editor Logo" className="h-8 w-8 rounded-full border border-white/20" />
             </a>
             <div className="hidden md:flex items-center gap-6 text-sm text-white/80">
               <a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a>
@@ -148,7 +148,8 @@ export default function App() {
         </nav>
       </header>
       {/* Hero */}
-      <section id="reel" className="relative min-h-[100svh] flex items-start md:items-end justify-center overflow-hidden pt-40 md:pt-32 pb-16 md:pb-20">
+      <main>
+      <section id="reel" className="relative min-h-[100svh] flex items-start md:items-end justify-center overflow-hidden pt-40 md:pt-32 pb-16 md:pb-20" role="banner">
         {/* Background texture and gradient */}
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(255,255,255,0.10),transparent)]" />
@@ -201,8 +202,8 @@ export default function App() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-28 px-6 max-w-6xl mx-auto min-h-[100svh] flex flex-col justify-center" id="testimonials">
-        <h2 className="text-4xl md:text-5xl font-semibold mb-3 text-center">Client Feedback</h2>
+      <section className="py-28 px-6 max-w-6xl mx-auto min-h-[100svh] flex flex-col justify-center" id="testimonials" aria-labelledby="testimonials-heading">
+        <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-semibold mb-3 text-center">Client Feedback</h2>
         <p className="text-center text-white/70 max-w-2xl mx-auto mb-12">Genuine words from people I’ve worked with.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {TESTIMONIALS.map((t, i) => (
@@ -251,8 +252,8 @@ export default function App() {
       </section>
 
       {/* Featured Work */}
-      <section className="py-28 px-6 max-w-7xl mx-auto min-h-[100svh] flex flex-col justify-center" id="work">
-        <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-center">Featured Projects</h2>
+      <section className="py-28 px-6 max-w-7xl mx-auto min-h-[100svh] flex flex-col justify-center" id="work" aria-labelledby="work-heading">
+        <h2 id="work-heading" className="text-4xl md:text-5xl font-semibold mb-4 text-center">Featured Projects</h2>
         <p className="text-white/70 text-center mb-14">Some of my favorite recent edits.</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -272,7 +273,7 @@ export default function App() {
                     aria-label={`Play ${video.title}`}
                   >
                     <div className="relative aspect-video w-full overflow-hidden">
-                      <img src={thumb} alt={video.title} className="h-full w-full object-cover" />
+                      <img src={thumb} alt={`${video.title} - Professional video editing sample by Danyl Ahmed`} className="h-full w-full object-cover" loading="lazy" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-80" />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white text-black shadow-lg opacity-95 group-hover:scale-105 transition">
@@ -374,8 +375,8 @@ export default function App() {
       </section>
 
       {/* Pricing */}
-      <section className="py-28 px-6 max-w-6xl mx-auto min-h-[100svh] flex flex-col justify-center" id="pricing">
-        <h2 className="text-4xl md:text-5xl font-semibold mb-2 text-center">Simple pricing. No hidden stuff.</h2>
+      <section className="py-28 px-6 max-w-6xl mx-auto min-h-[100svh] flex flex-col justify-center" id="pricing" aria-labelledby="pricing-heading">
+        <h2 id="pricing-heading" className="text-4xl md:text-5xl font-semibold mb-2 text-center">Simple pricing. No hidden stuff.</h2>
         <p className="text-white/70 text-center mb-4">Clear scope. No hidden fees.</p>
         <div className="text-center mb-8 px-4 py-2 rounded-full bg-white/5 border border-white/20 max-w-fit mx-auto">
           <p className="text-white/90 text-sm font-medium">Price increase coming soon - Lock in current rates now!</p>
@@ -508,7 +509,7 @@ export default function App() {
           <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
             <img
               src="/danyl.png"
-              alt="Danyl portrait"
+              alt="Danyl Ahmed - Professional video editor for AI agencies and coaches"
               className="w-full h-full object-cover aspect-[4/5]"
               loading="lazy"
               sizes="(min-width: 768px) 50vw, 100vw"
@@ -609,8 +610,8 @@ export default function App() {
       
 
       {/* Contact */}
-      <section className="py-24 px-6 max-w-4xl mx-auto text-center min-h-[70svh] flex flex-col justify-center" id="contact">
-        <h2 className="text-4xl md:text-5xl font-semibold mb-6">Let’s make something</h2>
+      <section className="py-24 px-6 max-w-4xl mx-auto text-center min-h-[70svh] flex flex-col justify-center" id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" className="text-4xl md:text-5xl font-semibold mb-6">Let's make something</h2>
         <p className="text-white/70 mb-8">Whether you have raw footage or just an idea, let’s talk.</p>
         <div className="flex justify-center">
           <motion.a
@@ -635,6 +636,7 @@ export default function App() {
           </div>
         </div>
       </section>
+      </main>
       {/* Floating CTA */}
       <motion.a
         href="#contact"
