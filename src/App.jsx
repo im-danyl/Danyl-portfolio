@@ -598,7 +598,7 @@ export default function App() {
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
               <div className="flex items-center gap-2 mb-2 text-white/80"><GraduationCap size={18} /><h3 className="text-lg font-semibold">Education</h3></div>
               <p className="text-white/85">BMS (Hons) in Business Management — Open University of Sri Lanka</p>
-              <p className="text-white/70 text-sm mt-1 leading-relaxed">Pursuing an Honours degree focusing on strategy, marketing, finance, and organizational behavior. Completed coursework in accounting, business law, and taxation. Expected graduation: Dec 2028.</p>
+              <p className="text-white/70 text-sm mt-1 leading-relaxed">Pursuing an Honours degree part-time through weekend classes, focusing on strategy, marketing, finance, and organizational behavior. Completed coursework in accounting, business law, and taxation. Expected graduation: Dec 2028.</p>
             </div>
           </div>
         </motion.div>
