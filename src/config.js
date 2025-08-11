@@ -37,7 +37,7 @@ export const CONFIG = {
   portfolio: {
     // Instagram Reels (Vertical videos)
     instagramReels: [
-      { id: 'INSTAGRAM_REEL_1', title: 'Instagram Reel 1' },
+      { id: 'C4_-MWyuG0F', title: 'Instagram Reel 1', url: 'https://www.instagram.com/reel/C4_-MWyuG0F/' },
       { id: 'INSTAGRAM_REEL_2', title: 'Instagram Reel 2' },
       { id: 'INSTAGRAM_REEL_3', title: 'Instagram Reel 3' },
       { id: 'INSTAGRAM_REEL_4', title: 'Instagram Reel 4' },

@@ -152,30 +152,43 @@ export default function Portfolio() {
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-              {CONFIG.portfolio.instagramReels.map((reel, i) => (
-                <motion.div
-                  key={reel.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.6 }}
-                  whileHover={{ y: -4, scale: 1.02 }}
-                  className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-300/20 transition group"
-                >
-                  {/* Placeholder for Instagram embed */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-pink-500/20">
-                    <div className="text-center p-4">
-                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-white/10 flex items-center justify-center">
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.219-.359-1.219c0-1.142.662-1.995 1.488-1.995.703 0 1.042.527 1.042 1.16 0 .705-.449 1.759-.681 2.737-.194.822.412 1.492 1.223 1.492 1.466 0 2.594-1.547 2.594-3.784 0-1.98-1.423-3.365-3.458-3.365-2.357 0-3.74 1.769-3.74 3.597 0 .712.274 1.477.617 1.893.068.083.077.156.057.242-.061.267-.196.83-.223.946-.035.149-.114.18-.263.109-1.035-.481-1.68-1.995-1.68-3.211 0-2.613 1.899-5.011 5.474-5.011 2.875 0 5.11 2.057 5.11 4.795 0 2.862-1.804 5.166-4.305 5.166-.84 0-1.631-.437-1.901-.956l-.517 1.965c-.188.723-.695 1.628-1.035 2.179 1.179.365 2.415.559 3.678.559 6.621 0 11.99-5.367 11.99-11.987C24.007 5.367 18.637.001 12.017.001z"/>
-                        </svg>
+              {CONFIG.portfolio.instagramReels.map((reel, i) => {
+                const ReelComponent = reel.url ? 'a' : 'div';
+                const reelProps = reel.url ? {
+                  href: reel.url,
+                  target: '_blank',
+                  rel: 'noreferrer'
+                } : {};
+                
+                return (
+                  <motion.div
+                    key={reel.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1, duration: 0.6 }}
+                    whileHover={{ y: -4, scale: 1.02 }}
+                    className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-300/20 transition group"
+                  >
+                    <ReelComponent {...reelProps} className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 hover:bg-gradient-to-br hover:from-purple-400/30 hover:to-pink-400/30 transition-colors">
+                      <div className="text-center p-4">
+                        <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                          </svg>
+                        </div>
+                        <p className="text-xs text-white/60">Instagram Reel</p>
+                        <p className="text-sm font-medium text-white/90 mt-1">{reel.title}</p>
+                        {reel.url && (
+                          <p className="text-xs text-cyan-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View on Instagram
+                          </p>
+                        )}
                       </div>
-                      <p className="text-xs text-white/60">Instagram Reel</p>
-                      <p className="text-sm font-medium text-white/90 mt-1">{reel.title}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                    </ReelComponent>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </section>
@@ -236,30 +249,43 @@ export default function Portfolio() {
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-              {CONFIG.portfolio.instagramReels2.map((reel, i) => (
-                <motion.div
-                  key={reel.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.6 }}
-                  whileHover={{ y: -4, scale: 1.02 }}
-                  className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-300/20 transition group"
-                >
-                  {/* Placeholder for Instagram embed */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-pink-500/20">
-                    <div className="text-center p-4">
-                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-white/10 flex items-center justify-center">
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.219-.359-1.219c0-1.142.662-1.995 1.488-1.995.703 0 1.042.527 1.042 1.16 0 .705-.449 1.759-.681 2.737-.194.822.412 1.492 1.223 1.492 1.466 0 2.594-1.547 2.594-3.784 0-1.98-1.423-3.365-3.458-3.365-2.357 0-3.74 1.769-3.74 3.597 0 .712.274 1.477.617 1.893.068.083.077.156.057.242-.061.267-.196.83-.223.946-.035.149-.114.18-.263.109-1.035-.481-1.68-1.995-1.68-3.211 0-2.613 1.899-5.011 5.474-5.011 2.875 0 5.11 2.057 5.11 4.795 0 2.862-1.804 5.166-4.305 5.166-.84 0-1.631-.437-1.901-.956l-.517 1.965c-.188.723-.695 1.628-1.035 2.179 1.179.365 2.415.559 3.678.559 6.621 0 11.99-5.367 11.99-11.987C24.007 5.367 18.637.001 12.017.001z"/>
-                        </svg>
+              {CONFIG.portfolio.instagramReels2.map((reel, i) => {
+                const ReelComponent = reel.url ? 'a' : 'div';
+                const reelProps = reel.url ? {
+                  href: reel.url,
+                  target: '_blank',
+                  rel: 'noreferrer'
+                } : {};
+                
+                return (
+                  <motion.div
+                    key={reel.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1, duration: 0.6 }}
+                    whileHover={{ y: -4, scale: 1.02 }}
+                    className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-300/20 transition group"
+                  >
+                    <ReelComponent {...reelProps} className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 hover:bg-gradient-to-br hover:from-purple-400/30 hover:to-pink-400/30 transition-colors">
+                      <div className="text-center p-4">
+                        <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                          </svg>
+                        </div>
+                        <p className="text-xs text-white/60">Instagram Reel</p>
+                        <p className="text-sm font-medium text-white/90 mt-1">{reel.title}</p>
+                        {reel.url && (
+                          <p className="text-xs text-cyan-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View on Instagram
+                          </p>
+                        )}
                       </div>
-                      <p className="text-xs text-white/60">Instagram Reel</p>
-                      <p className="text-sm font-medium text-white/90 mt-1">{reel.title}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                    </ReelComponent>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </section>
