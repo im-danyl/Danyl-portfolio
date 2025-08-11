@@ -2,30 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Play, X, Briefcase, GraduationCap, ChevronDown, Menu } from 'lucide-react'
-
-const FEATURED_VIDEOS = [
-  { id: 'ypiYSQdN1Lw', title: 'Sample Work 1' },
-  { id: '9X99i386VKI', title: 'Sample Work 2' },
-  { id: '6E_5aWYvdXw', title: 'Sample Work 3' },
-  { id: 'HoD7VMfPvXc', title: 'Sample Work 4' },
-  { id: 'ZR32xGU4UY4', title: 'Sample Work 5' },
-  { id: 'AtT4JMnXtoo', title: 'Sample Work 6' },
-]
-
-const REEL_YOUTUBE_ID = 'ypiYSQdN1Lw' // sample from Featured Work; set to '' to use local video
-
-const TESTIMONIALS = [
-  {
-    type: 'youtube',
-    id: '-zqzjf_fjU0',
-    caption: 'Rylee Maiden — YouTube Lead Launch — Pennsylvania, USA',
-  },
-  {
-    type: 'youtube',
-    id: '9XghCEPDCPU',
-    caption: 'Hayato Nakamura — Lead Control Media — San Diego, USA',
-  },
-]
+import { CONFIG } from './config.js'
 
 const FAQS = [
   {
@@ -248,8 +225,8 @@ export default function App() {
 
           {/* Big Reel Player */}
           <div className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.5)] bg-black/40 backdrop-blur">
-            {REEL_YOUTUBE_ID ? (
-              <HeroReel id={REEL_YOUTUBE_ID} />
+            {CONFIG.heroVideo ? (
+              <HeroReel id={CONFIG.heroVideo} />
             ) : (
               <video
                 src="/intro.mp4"
@@ -271,7 +248,7 @@ export default function App() {
         <h2 id="testimonials-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 sm:mb-4 text-center">Client Feedback</h2>
         <p className="text-center text-white/70 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 text-sm sm:text-base">Genuine words from people I've worked with.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
-          {TESTIMONIALS.map((t, i) => (
+          {CONFIG.testimonials.map((t, i) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, y: 40 }}
@@ -322,7 +299,7 @@ export default function App() {
         <p className="text-white/70 text-center mb-8 sm:mb-12 lg:mb-14 px-4 text-sm sm:text-base">Some of my favorite recent edits.</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {FEATURED_VIDEOS.map((video, i) => {
+          {CONFIG.featuredVideos.map((video, i) => {
             const thumb = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`
             const watchUrl = `https://www.youtube.com/watch?v=${video.id}`
             return (
@@ -382,12 +359,12 @@ export default function App() {
         </div>
         <div className="text-center mt-10">
           <motion.a
-            href="#contact"
+            href="/portfolio"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.98 }}
             className="inline-flex items-center justify-center rounded-full bg-white text-black px-5 py-3 font-medium"
           >
-            Get Started
+            See More
           </motion.a>
         </div>
       </section>
@@ -680,7 +657,7 @@ export default function App() {
         <p className="text-white/70 mb-6 sm:mb-8 px-4 text-sm sm:text-base">Whether you have raw footage or just an idea, let's talk.</p>
         <div className="flex justify-center">
           <motion.a
-            href="https://wa.me/94773377082"
+            href={`https://wa.me/${CONFIG.personal.whatsapp}`}
             target="_blank"
             rel="noreferrer"
             whileHover={{ scale: 1.05 }}
@@ -693,11 +670,11 @@ export default function App() {
           </motion.a>
         </div>
         <div className="mt-6 sm:mt-8 flex flex-col items-center justify-center gap-3 sm:gap-4">
-          <a href="mailto:thedanylahmed@gmail.com" className="text-white/90 hover:text-white transition-colors text-sm sm:text-base">thedanylahmed@gmail.com</a>
+          <a href={`mailto:${CONFIG.personal.email}`} className="text-white/90 hover:text-white transition-colors text-sm sm:text-base">{CONFIG.personal.email}</a>
           <div className="flex items-center justify-center gap-5 sm:gap-7 text-white/80">
-            <a href="https://x.com/danyl_ds" target="_blank" rel="noreferrer" className="hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center text-sm sm:text-base">X</a>
-            <a href="https://www.linkedin.com/in/danyl-ahmed/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center text-sm sm:text-base">LinkedIn</a>
-            <a href="https://www.instagram.com/ds_danyl/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center text-sm sm:text-base">Instagram</a>
+            <a href={CONFIG.social.x} target="_blank" rel="noreferrer" className="hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center text-sm sm:text-base">X</a>
+            <a href={CONFIG.social.linkedin} target="_blank" rel="noreferrer" className="hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center text-sm sm:text-base">LinkedIn</a>
+            <a href={CONFIG.social.instagram} target="_blank" rel="noreferrer" className="hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center text-sm sm:text-base">Instagram</a>
           </div>
         </div>
       </section>
