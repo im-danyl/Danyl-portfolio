@@ -38,9 +38,9 @@ export const CONFIG = {
     // Instagram Reels (Vertical videos)
     instagramReels: [
       { id: 'C4_-MWyuG0F', title: 'Instagram Reel 1', url: 'https://www.instagram.com/reel/C4_-MWyuG0F/' },
-      { id: 'INSTAGRAM_REEL_2', title: 'Instagram Reel 2' },
-      { id: 'INSTAGRAM_REEL_3', title: 'Instagram Reel 3' },
-      { id: 'INSTAGRAM_REEL_4', title: 'Instagram Reel 4' },
+      { id: 'C14SZm6OPJp', title: 'Instagram Reel 2', url: 'https://www.instagram.com/reel/C14SZm6OPJp/' },
+      { id: 'C2jAu5KO7rU', title: 'Instagram Reel 3', url: 'https://www.instagram.com/reel/C2jAu5KO7rU/' },
+      { id: 'C19Zpnmu0eL', title: 'Instagram Reel 4', url: 'https://www.instagram.com/reel/C19Zpnmu0eL/' },
     ],
 
     // YouTube Long Form Videos
