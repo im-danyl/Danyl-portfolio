@@ -128,7 +128,7 @@ export default function App() {
         <nav className="mx-auto max-w-5xl px-4 sm:px-6 py-3 md:py-4">
           <div className="flex items-center justify-between rounded-full bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 shadow-[0_0_40px_rgba(34,211,238,0.06)]">
             <a href="#" className="flex items-center gap-2">
-              <img src="/logo.png" alt="Danyl" className="h-8 w-8 rounded-full" />
+              <img src="/logo.png" alt="Danyl" className="h-8 w-8 rounded-full border border-white/20" />
               <span className="text-lg font-semibold tracking-tight">Danyl</span>
             </a>
             <div className="hidden md:flex items-center gap-6 text-sm text-white/80">
