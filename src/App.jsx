@@ -624,10 +624,13 @@ export default function App() {
             Book a Call
           </motion.a>
         </div>
-        <div className="mt-8 flex items-center justify-center gap-7 text-white/80">
-          <a href="https://x.com/yourhandle" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Twitter</a>
-          <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
-          <a href="https://instagram.com/yourhandle" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Instagram</a>
+        <div className="mt-8 flex flex-col items-center justify-center gap-4">
+          <a href="mailto:thedanylahmed@gmail.com" className="text-white/90 hover:text-white transition-colors">thedanylahmed@gmail.com</a>
+          <div className="flex items-center justify-center gap-7 text-white/80">
+            <a href="https://x.com/danyl_ds" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">X</a>
+            <a href="https://www.linkedin.com/in/danyl-ahmed/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://www.instagram.com/ds_danyl/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Instagram</a>
+          </div>
         </div>
       </section>
       {/* Floating CTA */}
