@@ -20,12 +20,12 @@ export const CONFIG = {
 
   // ========== MAIN HERO VIDEO ==========
   // This video shows in the main hero section
-  heroVideo: 'ypiYSQdN1Lw',
+  heroVideo: 'LoIWGIfuzwc',
 
   // ========== FEATURED VIDEOS (Main Page) ==========
   // These show in the "Featured Projects" section on homepage
   featuredVideos: [
-    { id: 'ypiYSQdN1Lw', title: 'Sample Work 1' },
+    { id: 'LoIWGIfuzwc', title: 'Sample Work 1' },
     { id: '9X99i386VKI', title: 'Sample Work 2' },
     { id: '6E_5aWYvdXw', title: 'Sample Work 3' },
     { id: 'HoD7VMfPvXc', title: 'Sample Work 4' },
