@@ -70,26 +70,49 @@ function FaqItem({ question, answer }) {
 }
 
 function HeroReel({ id }) {
+  const thumb = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+
   return (
-    <div className="relative aspect-video">
-      <iframe
-        className="w-full h-full"
-        src={`https://www.youtube.com/embed/${id}?rel=0`}
-        title="Showreel"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      />
-      <a
-        href={`https://www.youtube.com/watch?v=${id}`}
-        target="_blank"
-        rel="noreferrer"
-        className="absolute inset-0 flex items-center justify-center"
-        aria-label="Play video"
-      >
-        <span className="sr-only">Play</span>
-      </a>
-    </div>
-  )
+    <Dialog.Root>
+      <Dialog.Trigger asChild>
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          className="group text-left rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-300/20 transition w-full"
+          aria-label={`Play hero video`}
+        >
+          <div className="relative aspect-video w-full overflow-hidden">
+            <img src={thumb} alt={`Hero video - Professional video editing sample by Danyl Ahmed`} className="h-full w-full object-cover" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-80" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white text-black shadow-lg opacity-95 group-hover:scale-105 transition">
+                <Play size={18} />
+                <span className="font-medium">Play Reel</span>
+              </div>
+            </div>
+          </div>
+        </motion.button>
+      </Dialog.Trigger>
+      <Dialog.Portal>
+        <Dialog.Overlay className="fixed inset-0 bg-black/80 backdrop-blur-sm" />
+        <Dialog.Content className="fixed inset-0 flex items-center justify-center p-4">
+          <div className="relative w-full max-w-5xl aspect-video">
+            <iframe
+              className="h-full w-full rounded-xl border border-white/10"
+              src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0`}
+              title="Hero Reel"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+            <Dialog.Close asChild>
+              <button className="absolute -top-12 right-0 md:top-0 md:-right-12 p-2 rounded-full bg-white text-black shadow">
+                <X size={18} />
+              </button>
+            </Dialog.Close>
+          </div>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
+  );
 }
 
 export default function App() {
