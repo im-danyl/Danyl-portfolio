@@ -25,6 +25,8 @@ export const CONFIG = {
   // ========== FEATURED VIDEOS (Main Page) ==========
   // These show in the "Featured Projects" section on homepage
   featuredVideos: [
+    { id: 'O', title: 'Portfolio Video 7' },
+    { id: 'GliPUcTvFHo', title: 'Portfolio Video 8' },
     { id: 'LoIWGIfuzwc', title: 'Sample Work 1' },
     { id: '9X99i386VKI', title: 'Sample Work 2' },
     { id: '6E_5aWYvdXw', title: 'Sample Work 3' },
