@@ -69,55 +69,34 @@ function FaqItem({ question, answer }) {
   )
 }
 
-function HeroReel({ id }) {
+function HeroReel({ id, onOpen }) {
   const thumb = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
   return (
-    <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          className="group text-left rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-300/20 transition w-full"
-          aria-label={`Play hero video`}
-        >
-          <div className="relative aspect-video w-full overflow-hidden">
-            <img src={thumb} alt={`Hero video - Professional video editing sample by Danyl Ahmed`} className="h-full w-full object-cover" loading="lazy" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-80" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white text-black shadow-lg opacity-95 group-hover:scale-105 transition">
-                <Play size={18} />
-                <span className="font-medium">Play Reel</span>
-              </div>
-            </div>
+    <motion.button
+      whileHover={{ scale: 1.02 }}
+      className="group text-left rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-300/20 transition w-full"
+      aria-label={`Play hero video`}
+      onClick={onOpen}
+    >
+      <div className="relative aspect-video w-full overflow-hidden">
+        <img src={thumb} alt={`Hero video - Professional video editing sample by Danyl Ahmed`} className="h-full w-full object-cover" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-80" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white text-black shadow-lg opacity-95 group-hover:scale-105 transition">
+            <Play size={18} />
+            <span className="font-medium">Play Reel</span>
           </div>
-        </motion.button>
-      </Dialog.Trigger>
-      <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 bg-black/80 backdrop-blur-sm" />
-        <Dialog.Content className="fixed inset-0 flex items-center justify-center p-4">
-          <div className="relative w-full max-w-5xl aspect-video">
-            <iframe
-              className="h-full w-full rounded-xl border border-white/10"
-              src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0`}
-              title="Hero Reel"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-            <Dialog.Close asChild>
-              <button className="absolute -top-12 right-0 md:top-0 md:-right-12 p-2 rounded-full bg-white text-black shadow">
-                <X size={18} />
-              </button>
-            </Dialog.Close>
-          </div>
-        </Dialog.Content>
-      </Dialog.Portal>
-    </Dialog.Root>
+        </div>
+      </div>
+    </motion.button>
   );
 }
 
 export default function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [heroReelOpen, setHeroReelOpen] = useState(false);
+
   return (
     <div className="bg-black text-white selection:bg-white/20">
       {/* Subtle global radial gradients (with ice-blue accents) */}
@@ -249,7 +228,28 @@ export default function App() {
           {/* Big Reel Player */}
           <div className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.5)] bg-black/40 backdrop-blur">
             {CONFIG.heroVideo ? (
-              <HeroReel id={CONFIG.heroVideo} />
+              <Dialog.Root open={heroReelOpen} onOpenChange={setHeroReelOpen}>
+                <HeroReel id={CONFIG.heroVideo} onOpen={() => setHeroReelOpen(true)} />
+                <Dialog.Portal>
+                  <Dialog.Overlay className="fixed inset-0 bg-black/80 backdrop-blur-sm" />
+                  <Dialog.Content className="fixed inset-0 flex items-center justify-center p-4">
+                    <div className="relative w-full max-w-5xl aspect-video">
+                      <iframe
+                        className="h-full w-full rounded-xl border border-white/10"
+                        src={heroReelOpen ? `https://www.youtube.com/embed/${CONFIG.heroVideo}?autoplay=1&rel=0` : ''}
+                        title="Hero Reel"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                      <Dialog.Close asChild>
+                        <button className="absolute -top-12 right-0 md:top-0 md:-right-12 p-2 rounded-full bg-white text-black shadow">
+                          <X size={18} />
+                        </button>
+                      </Dialog.Close>
+                    </div>
+                  </Dialog.Content>
+                </Dialog.Portal>
+              </Dialog.Root>
             ) : (
               <video
                 src="/intro.mp4"
