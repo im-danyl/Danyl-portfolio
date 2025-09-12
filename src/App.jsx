@@ -231,8 +231,8 @@ export default function App() {
               <Dialog.Root open={heroReelOpen} onOpenChange={setHeroReelOpen}>
                 <HeroReel id={CONFIG.heroVideo} onOpen={() => setHeroReelOpen(true)} />
                 <Dialog.Portal>
-                  <Dialog.Overlay className="fixed inset-0 bg-black/80 backdrop-blur-sm" />
-                  <Dialog.Content className="fixed inset-0 flex items-center justify-center p-4">
+                  <Dialog.Overlay className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100]" />
+                  <Dialog.Content className="fixed inset-0 flex items-center justify-center p-4 z-[100]">
                     <div className="relative w-full max-w-5xl aspect-video">
                       <iframe
                         className="h-full w-full rounded-xl border border-white/10"
