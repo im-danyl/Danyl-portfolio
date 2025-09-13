@@ -26,7 +26,7 @@ export const CONFIG = {
   // These show in the "Featured Projects" section on homepage
   featuredVideos: [
     { id: 'ORxIrKsGp_c', title: 'Portfolio Video 7' },
-    { id: 'WA7gEwXIPng', title: 'Portfolio Video 8' },
+    { id: 'GliPUcTvFHo', title: 'Portfolio Video 8' },
     { id: 'LoIWGIfuzwc', title: 'Sample Work 1' },
     { id: '9X99i386VKI', title: 'Sample Work 2' },
     { id: '6E_5aWYvdXw', title: 'Sample Work 3' },
