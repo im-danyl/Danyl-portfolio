@@ -26,13 +26,13 @@ export const CONFIG = {
   // These show in the "Featured Projects" section on homepage
   featuredVideos: [
     { id: 'ORxIrKsGp_c', title: 'Bewhale' },
-    { id: 'GliPUcTvFHo', title: 'Noa Buko 2' },
+    { id: 'WA7gEwXIPng', title: 'Noa Buko 1' },
     { id: 'LoIWGIfuzwc', title: 'Danyl Portfolio' },
     { id: '9X99i386VKI', title: 'Rylee Maiden 1' },
     { id: '6E_5aWYvdXw', title: 'Rylee Maiden 2' },
     { id: 'HoD7VMfPvXc', title: 'Rylee Maiden 3' },
     { id: 'ZR32xGU4UY4', title: 'Rylee Maiden 4' },
-    { id: 'WA7gEwXIPng', title: 'Noa Buko 1' },
+    { id: 'GliPUcTvFHo', title: 'Noa Buko 2' },
     { id: 'AtT4JMnXtoo', title: 'Rylee Maiden 5' },
   ],
 
