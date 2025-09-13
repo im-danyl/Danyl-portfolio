@@ -32,6 +32,7 @@ export const CONFIG = {
     { id: '6E_5aWYvdXw', title: 'Sample Work 3' },
     { id: 'HoD7VMfPvXc', title: 'Sample Work 4' },
     { id: 'ZR32xGU4UY4', title: 'Sample Work 5' },
+    { id: 'WA7gEwXIPng', title: 'Portfolio Video 8' },
     { id: 'AtT4JMnXtoo', title: 'Sample Work 6' },
   ],
 
