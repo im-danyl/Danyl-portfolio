@@ -32,7 +32,7 @@ export const CONFIG = {
     { id: '6E_5aWYvdXw', title: 'Rylee Maiden 2' },
     { id: 'HoD7VMfPvXc', title: 'Rylee Maiden 3' },
     { id: 'ZR32xGU4UY4', title: 'Rylee Maiden 4' },
-    { id: 'GliPUcTvFHo', title: 'Noa Buko 2' },
+    { id: '7tbAHjLh2Qw', title: 'Finance Promotion' },
     { id: 'AtT4JMnXtoo', title: 'Rylee Maiden 5' },
   ],
 
