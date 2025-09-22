@@ -27,12 +27,12 @@ export const CONFIG = {
   featuredVideos: [
     { id: 'WA7gEwXIPng', title: 'Noa Buko 1' },
     { id: 'LoIWGIfuzwc', title: 'Danyl Portfolio' },
+    { id: '7tbAHjLh2Qw', title: 'Finance Promotion' },
     { id: 'ORxIrKsGp_c', title: 'Bewhale' },
     { id: '9X99i386VKI', title: 'Rylee Maiden 1' },
     { id: '6E_5aWYvdXw', title: 'Rylee Maiden 2' },
     { id: 'HoD7VMfPvXc', title: 'Rylee Maiden 3' },
     { id: 'ZR32xGU4UY4', title: 'Rylee Maiden 4' },
-    { id: '7tbAHjLh2Qw', title: 'Finance Promotion' },
     { id: 'AtT4JMnXtoo', title: 'Rylee Maiden 5' },
   ],
 
