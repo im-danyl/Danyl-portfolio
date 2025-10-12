@@ -34,6 +34,7 @@ export const CONFIG = {
     { id: 'HoD7VMfPvXc', title: 'Rylee Maiden 3' },
     { id: 'ZR32xGU4UY4', title: 'Rylee Maiden 4' },
     { id: 'AtT4JMnXtoo', title: 'Rylee Maiden 5' },
+    { id: 'EXz80uw2XSU', title: 'jimmy flores' },
   ],
 
   // ========== PORTFOLIO PAGE CONTENT ==========
