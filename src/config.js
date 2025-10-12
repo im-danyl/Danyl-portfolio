@@ -25,6 +25,8 @@ export const CONFIG = {
   // ========== FEATURED VIDEOS (Main Page) ==========
   // These show in the "Featured Projects" section on homepage
   featuredVideos: [
+    { id: 'EXz80uw2XSU', title: 'jimmy flores' },
+    { id: 'NnDKIz9E3to', title: 'Noa buko 2' },
     { id: 'WA7gEwXIPng', title: 'Noa Buko 1' },
     { id: 'LoIWGIfuzwc', title: 'Danyl Portfolio' },
     { id: '7tbAHjLh2Qw', title: 'Finance Promotion' },
@@ -34,8 +36,6 @@ export const CONFIG = {
     { id: 'HoD7VMfPvXc', title: 'Rylee Maiden 3' },
     { id: 'ZR32xGU4UY4', title: 'Rylee Maiden 4' },
     { id: 'AtT4JMnXtoo', title: 'Rylee Maiden 5' },
-    { id: 'EXz80uw2XSU', title: 'jimmy flores' },
-    { id: 'NnDKIz9E3to', title: 'Noa buko 2' },
   ],
 
   // ========== PORTFOLIO PAGE CONTENT ==========
