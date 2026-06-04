@@ -25,6 +25,14 @@ export const CONFIG = {
   // ========== FEATURED VIDEOS (Main Page) ==========
   // These show in the "Featured Projects" section on homepage
   featuredVideos: [
+    { id: 'cvEZHouhn-k', title: 'History’s Forgotten Women Mystics', type: 'youtube' },
+    { id: 'P4BWDv6H5to', title: 'Happiness Is A Class Issue — Edith Hall', type: 'youtube' },
+    { id: 'ty2kePFI0vQ', title: 'A Time That Demands Whimsy — Katherine May', type: 'youtube' },
+    { id: 'DZH8793jBgD', title: 'Featured Instagram Reel 1', type: 'instagram', url: 'https://www.instagram.com/reel/DZH8793jBgD/' },
+    { id: 'DYt9dNWFvYO', title: 'Featured Instagram Reel 2', type: 'instagram', url: 'https://www.instagram.com/reel/DYt9dNWFvYO/' },
+    { id: 'RhsfFOnrNzY', title: 'How KOKO Is Reshaping Consumer Finance', type: 'youtube' },
+    { id: 'rjW4xUEY9kc', title: 'Cycle Pure Incense — Delivering Hope', type: 'youtube' },
+    { id: 'TViNRO9aimU', title: 'HNB Life — Rebrand & Market Share', type: 'youtube' },
     { id: 'EXz80uw2XSU', title: 'jimmy flores' },
     { id: 'NnDKIz9E3to', title: 'Noa buko 2' },
     { id: 'WA7gEwXIPng', title: 'Noa Buko 1' },
