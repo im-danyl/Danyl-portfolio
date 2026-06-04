@@ -206,8 +206,8 @@ export default function App() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-center mb-8 md:mb-10"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 sm:mb-6 tracking-tight text-white leading-tight">
-              Video Editor & Motion Designer for<br /><span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">Global Creators & Corporate Leaders</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-6 tracking-tight text-white leading-tight max-w-4xl mx-auto">
+              Video Editor & Motion Designer<br className="hidden md:block" /> for <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">Global Creators & Corporate Leaders</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-4xl mx-auto px-2 leading-relaxed">
               Crafting premium video content and high-end motion design for international clients, corporate giants, and world-class podcasts.
