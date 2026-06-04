@@ -207,11 +207,10 @@ export default function App() {
             className="text-center mb-8 md:mb-10"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 sm:mb-6 tracking-tight text-white leading-tight">
-              Talking Head Video Editor for<br /><span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">AI Agencies & Coaches</span>
+              Video Editor & Motion Designer for<br /><span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">Global Creators & Corporate Leaders</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-4xl mx-auto px-2 leading-relaxed">
-              I help agencies and coaches grow their influence with expert video production —<br className="hidden sm:block" />
-              <span className="sm:hidden"> </span>from talking head videos to YouTube content, social clips, and full content repurposing.
+              Crafting premium video content and high-end motion design for international clients, corporate giants, and world-class podcasts.
             </p>
             <div className="mt-8 sm:mt-6 flex items-center justify-center gap-4">
               <motion.a
